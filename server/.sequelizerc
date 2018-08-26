@@ -1,0 +1,17 @@
+var path = require('path');
+
+if (process.env.SEQUELIZE_CLI_DB === 'records') {
+  module.exports = {
+    'config': path.resolve('db/records', 'config.js'),
+    'migrations-path': path.resolve('db/records', 'migrations'),
+    'models-path': path.resolve('db/records', 'models'),
+    'seeders-path': path.resolve('db/records', 'seeders')
+  };
+} else {
+  module.exports = {
+    'config': path.resolve('db/content', 'config.js'),
+    'migrations-path': path.resolve('db/content', 'migrations'),
+    'models-path': path.resolve('db/content', 'models'),
+    'seeders-path': path.resolve('db/content', 'seeders')
+  };
+}

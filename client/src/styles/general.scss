@@ -1,0 +1,26 @@
+#react-app {
+  background-color: $app-bg-color;
+  color: $text-color;
+  font-size: $app-font-size;
+  a {
+    color: $color-link;
+    &:hover, &:active {
+      color: $color-link-active;
+    }
+  }
+}
+
+body {
+  font-size: $body-font-size !important;
+}
+
+form {
+  input.invalid, select.invalid, textarea.invalid {
+    color: #a90329 !important;
+    background-color: #ffddee !important;
+  }
+}
+
+.modal-body {
+  font-size: 14px;
+}

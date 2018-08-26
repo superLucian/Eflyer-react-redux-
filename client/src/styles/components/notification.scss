@@ -1,0 +1,24 @@
+.top-notification {
+  display: block;
+  padding: 5px 20px 8px;
+  background: #ffffaa;
+  color: $text-color;
+  font-size: 1.4rem;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 0 0 5px 0 #888;
+  position: fixed;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: $zindex-notification;
+
+  &.fail {
+    background: #ff4f5f;
+    color: #fff;
+  }
+}

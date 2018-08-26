@@ -1,0 +1,60 @@
+#page-loading {
+
+  .contents {
+    padding-top: 50px;
+    text-align: center;
+
+    .logo {
+      img {
+        height: 100px;
+      }
+    }
+
+    .spinner {
+      width: 300px !important;
+      height: 300px !important;;
+      fill: $color-primary !important;;
+      margin: 50px auto;
+    }
+  }
+
+}
+
+#page-login-required {
+   .contents {
+     padding-top: 100px;
+     text-align: center;
+
+     .logo {
+       img {
+         height: 100px;
+       }
+     }
+   }
+}
+
+#page-session-expired {
+  .contents {
+    padding-top: 100px;
+    text-align: center;
+
+    .logo {
+      img {
+        height: 100px;
+      }
+    }
+  }
+}
+
+#page-not-found {
+  .contents {
+    padding-top: 100px;
+    text-align: center;
+
+    .logo {
+      img {
+        height: 100px;
+      }
+    }
+  }
+}

@@ -1,0 +1,267 @@
+#page-products {
+  #left-panel {
+    .section#product-search {
+      .content-inner {
+        padding-bottom: 0;
+      }
+      .results-title {
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
+      .results {
+        height: calc(100vh - 280px);
+        min-height: 300px;
+        overflow-y: auto;
+        .product {
+          height: 50px;
+          margin-bottom: 5px;
+          cursor: pointer;
+          clear: both;
+          background-color: #444;
+          &:hover {
+            background-color: #555;
+          }
+          img {
+            float: left;
+            width: 50px;
+            height: 50px;
+          }
+          .details {
+            float: left;
+            width: calc(100% - 55px);
+            height: 50px;
+            margin-left: 5px;
+            padding: 5px;
+            .partnum-price {
+              margin-top: 3px;
+            }
+            .partnum {
+              display: inline-block;
+              width: 60%;
+            }
+            .price {
+              display: inline-block;
+              width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  $width: 600px;
+  $height: 500px;
+  $form-height: 180px;
+
+  #product-form {
+    $image-height: 100px;
+    $image-width: $image-height;
+    $button-width: 150px;
+    $input-height: 32px;
+    $margin: 7px;
+
+    width: $width;
+    height: $form-height;
+    margin: 0 auto;
+    padding-top: 10px;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .image_details {
+      clear: both;
+      height: $image-height;
+      margin-bottom: $margin;
+      .image {
+        float: left;
+        width: $image-width;
+        height: 100%;
+        overflow-y: hidden;
+        margin-right: $margin;
+        -webkit-box-shadow: 0 0 3px 0 #aaa;
+        -moz-box-shadow: 0 0 3px 0 #aaa;
+        box-shadow: 0 0 3px 0 #aaa;
+        img {
+          width: 100%;
+        }
+      }
+      .details {
+        float: left;
+        width: $width - $image-width - $margin;
+        height: 100%;
+        .name_partnum {
+          height: $input-height;
+          margin-bottom: $margin;
+          .name {
+            float: left;
+            width: $width - $image-width - $button-width - $margin * 2;
+            margin-right: $margin;
+          }
+          .partnum {
+            float: left;
+            width: $button-width;
+          }
+        }
+        .desc_price_featured {
+          height: $image-height - $input-height - $margin;
+          .description {
+            float: left;
+            width: $width - $image-width - $button-width - $margin * 2;
+            height: 100%;
+            margin-right: $margin;
+            textarea {
+              height: 100%;
+            }
+          }
+          .price_featured {
+            float: left;
+            width: $button-width;
+            .price {
+              margin-bottom: $margin;
+            }
+            .featured {
+              label {
+                font-weight: normal;
+                float: left;
+                width: $button-width - $input-height;
+              }
+              input[type=checkbox] {
+                float: right;
+              }
+            }
+          }
+        }
+      }
+    }
+    .note_action {
+      clear: both;
+      height: $input-height;
+      .note {
+        float: left;
+        width: $width - $button-width - $margin;
+        margin-right: $margin;
+      }
+      .action {
+        float: left;
+        width: $button-width;
+        button {
+          width: 100%;
+          height: $input-height;
+          background-color: $color-primary-light;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .separator {
+    height: 2px;
+    //border-bottom: 2px solid #555;
+    box-shadow: 0 -2px 2px 0 #555;
+    height: 1px;
+  }
+
+  #flyer-products {
+    $list-item-height: 70px;
+    $actions-width: 80px;
+    $button-height: 30px;
+    $horizontal-margin: 7px;
+    $vertical-margin: 15px;
+
+    width: $width;
+    height: calc(100% - #{$form-height});
+    min-height: $height - $form-height;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    .title {
+      margin: 0 0 10px;
+    }
+    .list {
+      height: calc(100% - 30px);
+      overflow-y: auto;
+
+      .product {
+        clear: both;
+        height: $list-item-height;
+        margin-bottom: $vertical-margin;
+        .image {
+          float: left;
+          width: $list-item-height;
+          height: 100%;
+          overflow-y: hidden;
+          margin-right: $horizontal-margin;
+          -webkit-box-shadow: 0 0 1px 0 #aaa;
+          -moz-box-shadow: 0 0 1px 0 #aaa;
+          box-shadow: 0 0 2px 0 #aaa;
+          img {
+            width: 100%;
+          }
+        }
+        .details {
+          float: left;
+          width: $width - $list-item-height - $actions-width - $horizontal-margin * 2;
+          height: 100%;
+          margin-right: $horizontal-margin;
+          background: #eee;
+          border-radius: 3px;
+          padding: 5px 10px;
+          .name, .partnum-price {
+            margin-bottom: 3px;
+          }
+          .partnum {
+            display: inline-block;
+            width: 40%;
+          }
+          .price {
+            display: inline-block;
+            width: 40%;
+          }
+          .featured {
+            display: inline-block;
+            width: 20%;
+          }
+          .desc_price_featured {
+            font-size: 1.2rem;
+          }
+        }
+        .actions {
+          float: left;
+          width: $actions-width;
+          height: 100%;
+          button {
+            display: block;
+            width: 100%;
+            height: $button-height;
+            padding: 0 7px;
+            text-align: left;
+            font-size: 1.2rem;
+            i.fa {
+              float: right;
+              margin-top: 1px;
+            }
+          }
+          button.edit {
+            margin-bottom: $list-item-height - $button-height * 2;
+            background-color: #00c0c0;
+            color: #fff;
+          }
+          button.remove {
+            background-color: #f06040;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  .page-actions {
+    .btn-previous {
+      width: 50%;
+    }
+    .btn-finish-flyer {
+      width: 50%;
+    }
+  }
+}

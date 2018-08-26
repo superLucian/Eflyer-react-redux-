@@ -1,0 +1,59 @@
+//== Base colors
+$color-primary: #005090;
+$color-primary-light:#1070d0;
+$color-primary-dark: #003050;
+$color-secondary: #d04070;
+$color-secondary-light: #f05090;
+$color-secondary-dark: #903050;
+
+$app-bg-color: #f8f8f8;
+$text-color: #333;
+$text-color-inverse: #ddd;
+$color-link: $color-primary;
+$color-link-active: $color-primary-light;
+
+//== Media queries breakpoints
+$mq-desktop-lg:                           1200px;
+$mq-desktop:                              992px;
+$mq-tablet:                               768px;
+$mq-mobile:                               480px;
+$mq-up-to-desktop-lg:                           ($mq-desktop-lg - 1); // 1199px
+$mq-up-to-desktop:                              ($mq-desktop - 1);    // 991px
+$mq-up-to-tablet:                               ($mq-tablet - 1);     // 767px
+$mq-up-to-mobile:                               ($mq-mobile - 1);     // 479px
+
+//== Layout
+$footer-height: 40px;
+$footer-bgcolor: #444;
+
+$left-panel-width: 300px;
+$left-panel-width-mobile: 220px;
+$left-panel-minified-width: 45px;
+$left-panel-bgcolor1: #3a3633;
+$left-panel-bgcolor2: #2a2725;
+
+$logo-height: 100px;
+$logo-height-mobile: 70px;
+
+//== z-indexes
+$zindex-dropdown: 700;
+$zindex-notification: 1000;
+
+//== Font
+$body-font-size: 10px;
+$app-font-size: 13px;
+
+//== Left Panel
+$left-panel-txtcolor: #bbb;
+$left-panel-section-title-color: #ddd;
+$left-panel-input-bgcolor: #333;
+$left-panel-input-color: #ddd;
+$left-panel-input-border: 1px solid #888;
+
+//== Home (Step 1) page
+$use-previous-flyer-button-bgcolor: $color-primary;
+$use-previous-flyer-button-bgcolor-hover: $color-primary-dark;
+$use-previous-flyer-button-txtcolor: #fff;
+$create-new-flyer-button-bgcolor: $color-secondary;
+$create-new-flyer-button-bgcolor-hover: $color-secondary-dark;
+$create-new-flyer-button-txtcolor: #fff;

@@ -1,0 +1,128 @@
+#root {
+  //box-sizing: border-box;
+  min-height: 100vh;
+  position: relative;
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+
+  &.base {
+    padding-bottom: $footer-height;
+  }
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height;
+  background-color: $footer-bgcolor;
+  .copyright {
+    text-align: center;
+    line-height: $footer-height;
+    font-size: 1.4rem;
+    color: $text-color-inverse;
+    -webkit-box-shadow: 0 0 5px 0 #888;
+    -moz-box-shadow: 0 0 5px 0 #888;
+    box-shadow: 0 0 5px 0 #888;
+  }
+}
+
+#left-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $left-panel-width;
+  height: 100vh;
+  overflow-y: auto;
+  background: -webkit-gradient(linear,left top,right top,color-stop(93%,$left-panel-bgcolor1),color-stop(100%,$left-panel-bgcolor2));
+  background: -webkit-linear-gradient(left,$left-panel-bgcolor1 93%,$left-panel-bgcolor2 100%);
+  background: -o-linear-gradient(left,$left-panel-bgcolor1 93%,$left-panel-bgcolor2 100%);
+  background: -ms-linear-gradient(left,$left-panel-bgcolor1 93%,$left-panel-bgcolor2 100%);
+  background: linear-gradient(to right,$left-panel-bgcolor1 93%,$left-panel-bgcolor2 100%);
+  -webkit-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  -moz-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  -ms-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  -o-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+}
+#main {
+  position: relative;
+  margin-left: $left-panel-width;
+  height: 100vh;
+  overflow-y: auto;
+  .contents {
+    padding: 15px 15px 50px 15px;
+    height: 100%;
+    overflow-y: auto;
+  }
+}
+.sidebar-minified {
+  #left-panel {
+    width: $left-panel-minified-width;
+    & > * {
+      display: none;
+    }
+  }
+  #main {
+    margin-left: $left-panel-minified-width;
+  }
+}
+@media only screen and (max-width: $mq-up-to-tablet) {
+  #left-panel {
+    width: $left-panel-width-mobile;
+    padding-bottom: 50px;
+  }
+  #main {
+    margin-left: $left-panel-width-mobile;
+  }
+}
+
+// left-panel is not closed to the left on Step 1, 4
+.page.responsive {
+  @media only screen and (max-width: $mq-up-to-tablet) {
+    #left-panel {
+      position: static;
+      width: 100%;
+      height: auto;
+      overflow-y: visible;
+      padding-bottom: 0;
+      background: $left-panel-bgcolor1;
+    }
+    #main {
+      margin-left: 0;
+      height: auto;
+      min-height: 400px;
+      overflow-y: visible;
+    }
+  }
+}
+
+// Main panel child elements
+.page-actions {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 50px;
+  width: calc(100% - #{$left-panel-width});
+  @media only screen and (max-width: $mq-up-to-tablet) {
+    width: 100% !important;
+  }
+  -webkit-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  -moz-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  -ms-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  -o-transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+  transition: width 250ms cubic-bezier(0.1,.57,.1,1);
+
+  button, a {
+    border-radius: 0;
+    height: 100%;
+  }
+}
+.sidebar-minified .page-actions {
+  width: calc(100% - #{$left-panel-minified-width});
+}
